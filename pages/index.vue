@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <img src="/img/top.png" class="top-image" />
+    <div>Aizu for Computer.</div>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #e4decd;
   .top-image {
     width: 30%;
     pointer-events: none;
