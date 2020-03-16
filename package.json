@@ -11,7 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "husky": "^4.2.3",
+    "nuxt": "^2.0.0",
+    "postcss-hexrgba": "^2.0.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-responsive-type": "^1.0.0",
+    "postcss-url": "^8.0.0"
   },
   "devDependencies": {}
 }
