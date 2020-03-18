@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img src="/img/top.png" class="top-image" />
+    <img src="/img/top.jpg" class="top-image" />
     <div>
       <div class="message">Aizu for Computer.</div>
       <div class="code">

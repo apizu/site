@@ -1,10 +1,12 @@
 # apizu-site
 
-> My breathtaking Nuxt.js project
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bd4f4b2c-b94b-4f6c-b614-7edbd493ad95/deploy-status)](https://app.netlify.com/sites/musing-villani-44b1be/deploys)
+
+APIs of Aizu
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
