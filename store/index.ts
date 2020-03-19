@@ -26,9 +26,10 @@ export const mutations: MutationTree<RootState> = {
 };
 
 export const actions: ActionTree<RootState, RootState> = {
-  async getNews({ dispatch, commit }, callback: Function) {
+  async get_news(_, callback: Function) {
     const res = await axios.get(endpoint+"/news");
-    commit("update_news", res);
+    console.log(res);
+    this.commit("update_news", res);
     callback();
   }
 };
