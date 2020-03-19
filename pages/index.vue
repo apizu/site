@@ -9,14 +9,16 @@
         </div>
       </div>
     </div>
+    {{news}}
     <information />
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
 import Information from "@/components/information.vue";
 
-export default {
+export default Vue.extend({
   components: {
     Information
   },
@@ -31,11 +33,11 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch("getNews", () => {
+    this.$store.dispatch("get_news", () => {
       this.news = this.$store.getters.news;
     });
   },
-};
+});
 </script>
 
 <style lang="postcss" scoped>
@@ -49,6 +51,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
+
     .top-image {
       width: 30%;
       pointer-events: none;

@@ -5,14 +5,15 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
 import MyFooter from "@/components/footer.vue";
 
-export default {
+export default Vue.extend({
   components: {
     MyFooter
   }
-};
+});
 </script>
 
 <style>
