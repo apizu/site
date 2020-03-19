@@ -19,7 +19,22 @@ import Information from "@/components/information.vue";
 export default {
   components: {
     Information
-  }
+  },
+  data(){
+    return {
+      news: {}
+    }
+  },
+  watch: {
+    markers() {
+      this.news = this.$store.getters.news;
+    }
+  },
+  created() {
+    this.$store.dispatch("getNews", () => {
+      this.news = this.$store.getters.news;
+    });
+  },
 };
 </script>
 
