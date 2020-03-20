@@ -9,32 +9,31 @@
         </div>
       </div>
     </div>
-    {{news}}
-    <information />
+    <news :news-list="newsList" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Information from "@/components/information.vue";
+import News from "@/components/News.vue";
 
 export default Vue.extend({
   components: {
-    Information
+    News
   },
   data(){
     return {
-      news: {}
+      newsList: []
     }
   },
   watch: {
-    markers() {
-      this.news = this.$store.getters.news;
+    newsList() {
+      this.newsList = this.$store.getters.newsList;
     }
   },
   created() {
     this.$store.dispatch("get_news", () => {
-      this.news = this.$store.getters.news;
+      this.newsList = this.$store.getters.news;
     });
   },
 });
@@ -63,6 +62,20 @@ export default Vue.extend({
     }
     .code {
       padding: 8px 0;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .top {
+      display: block;
+      min-height: 50vh;
+      .top-image {
+        padding: 20px;
+        padding-top: 60px;
+        width: 70%;
+      }
+      .code {
+        padding: 20px;
+      }
     }
   }
 }
