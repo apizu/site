@@ -14,7 +14,7 @@
     "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/router": "^1.5.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "husky": "^4.2.3",
     "nuxt": "^2.0.0",
     "postcss-hexrgba": "^2.0.0",
