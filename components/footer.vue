@@ -3,7 +3,7 @@
     <div class="copyright">
       <pre
         v-highlightjs
-      ><code class="json">{"copyright":"2020 MizukiSonoko"}</code></pre>
+      ><code class="json">{"copyright":"2020-2021 MizukiSonoko"}</code></pre>
     </div>
   </div>
 </template>
