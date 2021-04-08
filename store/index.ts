@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { NewsContent } from "@/types/news"
 
-const endpoint = "http://localhost:5000"
+const endpoint = "https://apizu.microcms.io/api/v1"
 
 type State = {
   newsList: Array<NewsContent>;
@@ -28,8 +28,12 @@ export const mutations: MutationTree<RootState> = {
 
 export const actions: ActionTree<RootState, RootState> = {
   async get_news(_, callback: Function) {
-    const res = await axios.get(endpoint+"/news");
+    const res = await axios.get(endpoint+"/news", {
+      headers: { "X-API-KEY": "c73950ee-636c-404b-99dc-451e5a202689" },
+      data: {}
+    });
     this.commit("update_news", res.data.news as  Array<NewsContent>);
+    console.log(res);
     callback();
   }
 };

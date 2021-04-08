@@ -28,12 +28,14 @@ export default Vue.extend({
   },
   watch: {
     newsList() {
-      this.newsList = this.$store.getters.newsList;
+      this.newsList = this.$store.state.getters.newsList;
+      console.log("watch newsList ", this.$store.state, this.newsList);
     }
   },
   created() {
     this.$store.dispatch("get_news", () => {
-      this.newsList = this.$store.getters.news;
+      console.log("newsList ", this.$store.state.getters, this.newsList);
+      this.newsList = this.$store.state.getters.newsList;
     });
   },
 });
